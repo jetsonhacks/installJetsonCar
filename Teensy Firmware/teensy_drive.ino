@@ -27,7 +27,7 @@ int steeringServoPin = 6 ;      // Pin 6 controls the steering servo
 // pwm_drive is the throttle setting for the TRAXXAS ESC
 // pwm_angle is the steering servo angle
 //
-void messageDrive( const race::drive_values& pwm )
+void messageDrive( const jetsoncar::drive_values& pwm )
 {
 //  Serial.print("Pwm drive : ");
 //  Serial.println(pwm.pwm_drive);
@@ -85,7 +85,7 @@ void messageEmergencyStop( const std_msgs::Bool& flag )
 }
 
 
-ros::Subscriber<race::drive_values> sub_drive("drive_pwm", &messageDrive );
+ros::Subscriber<jetsoncar::drive_values> sub_drive("drive_pwm", &messageDrive );
 ros::Subscriber<std_msgs::Bool> sub_stop("eStop", &messageEmergencyStop );
 
 
