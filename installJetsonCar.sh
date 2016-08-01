@@ -22,7 +22,7 @@ cp -r Arduino\ Firmware/* '/home/ubuntu/sketchbook'
 sudo apt-get install ros-indigo-rosserial-arduino ros-indigo-rosserial -y
 cd ~/sketchbook/libraries
 rm -rf ros_lib
-source ~/jetsonbot/devel/setup.bash
+source ~/jetsoncar/devel/setup.bash
 rosrun rosserial_arduino make_libraries.py ~/sketchbook/libraries
 cd ~/installJetsonCar
 
