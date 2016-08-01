@@ -19,7 +19,7 @@ catkin_make
 # Copy Arduino code 
 cd ~/installJetsonCar
 cp -r Arduino\ Firmware/* '/home/ubuntu/sketchbook'
-sudo apt-get install ros-indigo-rosserial-arduino ros-indigo-rosserial -y
+sudo apt-get install ros-indigo-rosserial-arduino ros-indigo-rosserial ros-indigo-angles -y
 cd ~/sketchbook/libraries
 rm -rf ros_lib
 source ~/jetsoncar/devel/setup.bash
