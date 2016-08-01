@@ -4,11 +4,11 @@
 # The packages needed for installing ROS on an Arduino
 # Joystick support for the Nyko game controller
 # This repository
-# git clone https://github.com/jetsonhacks/jetsoncar.git
+# git clone https://github.com/jetsonhacks/installJetsonCar.git
 
 # Make the jetsonbot catkin workspace
-./setupCatkinWorkspace.sh jetsonbot
-cd ~/jetsonbot
+./setupCatkinWorkspace.sh jetsoncar
+cd ~/jetsoncar
 sudo apt-get install arduino
 sudo apt-get install ros-indigo-joy -y
 cd src
@@ -17,12 +17,12 @@ cd ..
 catkin_make
 
 # Copy Arduino code 
-cd ~/jetsoncar
+cd ~/installJetsonCar
 cp -r Arduino\ Firmware/* '/home/ubuntu/sketchbook'
 sudo apt-get install ros-indigo-rosserial-arduino ros-indigo-rosserial -y
 cd ~/sketchbook/libraries
 rm -rf ros_lib
 source ~/jetsonbot/devel/setup.bash
 rosrun rosserial_arduino make_libraries.py ~/sketchbook/libraries
-cd ~/jetsoncar
+cd ~/installJetsonCar
 
